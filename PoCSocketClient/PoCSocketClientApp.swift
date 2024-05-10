@@ -11,7 +11,7 @@ import SwiftUI
 struct PoCSocketClientApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: ContentViewModel(socketManager: SocketClientManagerMock()))
         }
     }
 }

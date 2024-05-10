@@ -8,17 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel: ContentViewModel
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if viewModel.loading {
+                ProgressView()
+            } else {
+                VStack {
+                    Image(systemName: "globe")
+                        .imageScale(.large)
+                        .foregroundStyle(.tint)
+
+                    Text("Hello, world!")
+                    Text(viewModel.value)
+                }
+                .padding()
+            }
         }
         .padding()
+        .task {
+            viewModel.send()
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(viewModel: ContentViewModel(socketManager: SocketClientManagerMock()))
 }

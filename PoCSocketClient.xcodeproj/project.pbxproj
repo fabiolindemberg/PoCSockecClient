@@ -14,6 +14,9 @@
 		33791AE82BDA83CF003E6C75 /* PoCSocketClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33791AE72BDA83CF003E6C75 /* PoCSocketClientTests.swift */; };
 		33791AF22BDA83CF003E6C75 /* PoCSocketClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33791AF12BDA83CF003E6C75 /* PoCSocketClientUITests.swift */; };
 		33791AF42BDA83CF003E6C75 /* PoCSocketClientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33791AF32BDA83CF003E6C75 /* PoCSocketClientUITestsLaunchTests.swift */; };
+		33791B022BDA92A9003E6C75 /* SocketClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33791B012BDA92A9003E6C75 /* SocketClientManager.swift */; };
+		33791B042BDA9406003E6C75 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 33791B032BDA9406003E6C75 /* SocketIO */; };
+		33C5A70C2BDADE00006603F6 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C5A70B2BDADE00006603F6 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		33791AED2BDA83CF003E6C75 /* PoCSocketClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoCSocketClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33791AF12BDA83CF003E6C75 /* PoCSocketClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoCSocketClientUITests.swift; sourceTree = "<group>"; };
 		33791AF32BDA83CF003E6C75 /* PoCSocketClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoCSocketClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		33791B012BDA92A9003E6C75 /* SocketClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClientManager.swift; sourceTree = "<group>"; };
+		33C5A70B2BDADE00006603F6 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33791B042BDA9406003E6C75 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +102,10 @@
 			children = (
 				33791AD62BDA83CD003E6C75 /* PoCSocketClientApp.swift */,
 				33791AD82BDA83CD003E6C75 /* ContentView.swift */,
+				33791B012BDA92A9003E6C75 /* SocketClientManager.swift */,
 				33791ADA2BDA83CF003E6C75 /* Assets.xcassets */,
 				33791ADC2BDA83CF003E6C75 /* Preview Content */,
+				33C5A70B2BDADE00006603F6 /* ContentViewModel.swift */,
 			);
 			path = PoCSocketClient;
 			sourceTree = "<group>";
@@ -143,6 +151,9 @@
 			dependencies = (
 			);
 			name = PoCSocketClient;
+			packageProductDependencies = (
+				33791B032BDA9406003E6C75 /* SocketIO */,
+			);
 			productName = PoCSocketClient;
 			productReference = 33791AD32BDA83CD003E6C75 /* PoCSocketClient.app */;
 			productType = "com.apple.product-type.application";
@@ -260,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C5A70C2BDADE00006603F6 /* ContentViewModel.swift in Sources */,
 				33791AD92BDA83CD003E6C75 /* ContentView.swift in Sources */,
+				33791B022BDA92A9003E6C75 /* SocketClientManager.swift in Sources */,
 				33791AD72BDA83CD003E6C75 /* PoCSocketClientApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PoCSocketClient/Preview Content\"";
+				DEVELOPMENT_TEAM = 6PN6V35AZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -453,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PoCSocketClient/Preview Content\"";
+				DEVELOPMENT_TEAM = 6PN6V35AZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -596,6 +611,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33791B032BDA9406003E6C75 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33791B002BDA8CA5003E6C75 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 33791ACB2BDA83CC003E6C75 /* Project object */;
 }
